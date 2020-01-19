@@ -34,24 +34,24 @@ class KetchupDecorator(Decorator):
         self.__product = self.get_decorated()
 
     def get_name(self):
-        print("name")
+        #print("name")
         #self.__name + "with ketchup"
         #return Decorator.get_name(self) + " with ketchup "
         #print(super(KetchupDecorator, self).get_name())
         return super(KetchupDecorator, self).get_name() + " with ketchup "
 
     def get_price(self):
-        print("price")
+        #print("price")
         #return Decorator.get_price(self) + 2.00
         return super(KetchupDecorator, self).get_price() + 2.00
 
     def get_decorated(self):
         #print(self.__product.__name)
         self.__product.__name = self.get_name()
-        print(self.__product.__name)
+        #print(self.__product.__name)
         self.__product.__price = self.get_price()
         #print(self.__product.__str__())
-        print(self.__product.__price)
+        #print(self.__product.__price)
         return self.__product
 
 

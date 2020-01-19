@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 from Strategy import StrategyRegularPrice, StrategySmallPromotion, StrategyBigPromotion
-
+from State import State
 
 class Product(object):
     """docstring for Product."""
@@ -33,8 +33,8 @@ class Order(ABC):
         self._id = Order._Order__number
         Order._Order__number = (Order._Order__number + 1) % 100
         self._price_total = 0
-        # self._state = StatePending()
         self._strategy = strategy
+        self._state = State()
 
     def __str__(self):
         string = 'Zamównienie nr {:>2}: '.format(self._id)

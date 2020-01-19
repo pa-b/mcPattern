@@ -6,7 +6,7 @@ import sys
 from Model import Product, OrderRegular, OrderTakeaway, OrderBuilderRegular, OrderBuilderTakeaway
 from Command import CommandRevertOrder, CommandComposeOrder, Invoker
 from Decorator import KetchupDecorator
-
+from State import State
 
 if __name__ == '__main__':
     # app = QApplication(sys.argv)
@@ -29,6 +29,17 @@ if __name__ == '__main__':
 
     print(order)
     print(order2)
+
+    # state = State()
+    # state.set_next()
+    # state.set_next()
+    # state.set_next()
+    # state.set_next()
+    # state.set_next()
+    # state.set_next()
+    # state.set_next()
+    # state.set_next()
+    #
 
     #CommandRevertOrder.execute(order)
     #print(order)
